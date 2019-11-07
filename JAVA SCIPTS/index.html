@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">  
+  <head>    
+    <title>Tarjeta Invitación</title>  
+  </head>  
+  <body>    
+    
+    <!-- Titlulo centrado -->
+    <h1 style="text-align: center;">INVITACION</h1>
+
+    <!-- Texto centrado -->
+    <h3 style="text-align: center;">Pulsa aquí</h3>
+
+    <!-- Botón imagen | la capa ocupa el 100% y alinea al centro su contenido -->
+    <div id="imgBoton" style="width: 100%;text-align: center;">
+
+        <!-- imagen que será el botón | cursor: pointer para que aparezca la mano al pasar por encima-->
+        <!-- Llama a la funcion mostrar() cundo se hace click sobre la imagen -->
+        <img src="apple.png" width="60" style="cursor: pointer;" onclick="mostrar();"></img>
+    
+    </div>
+
+    <!-- Capa que contiene la imagen de la tarjeta que se quiere mostrar -->
+    <!-- display: none para que esté oculta inicialmente -->
+    <div id="imgTarjeta" style="display: none;">
+
+        <!-- la capa ocupa el 100% y alinea al centro su contenido -->
+        <div style="width: 100%;text-align: center;">
+          <img src="tarjeta.jpg" width="250"></img>
+        </div>
+
+    </div>
+
+  <!-- Bloque que contiene el código JavaSript -->
+  <script>
+    function mostrar() {
+
+      // se obtiene la referencia al div que contiene la imagena mostrar
+      var imgDiv = document.getElementById('imgTarjeta');
+
+      // se cambia la clase display: none por display: block para que se muestre el contenido
+      imgDiv.style.display = ('block');
+
+    }    
+  </script>
+
+  </body>  
+</html>
